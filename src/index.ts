@@ -12,6 +12,10 @@ app.use(cors({
   origin: '*'
 }))
 app.use(express.json())
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+}
+)
 app.use('/api/v1',userRoutes)
 app.use('/api/v1',signInRoutes)
 app.use('/api/v1',adminRoutes)
